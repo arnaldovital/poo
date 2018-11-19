@@ -7,7 +7,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name="Episodio")
 public class Episodio {
-	@ID
+	@Id
 	private String elenco;
 	private String duraçao;
 	public String getElenco() {

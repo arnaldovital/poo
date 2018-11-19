@@ -10,7 +10,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name="Filmes")
 public class Filmes {
-	@ID
+	@Id
 	@OneToOne
     @JoinColumn(name = "filmes_id")
 	private String nome;

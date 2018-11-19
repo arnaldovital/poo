@@ -9,9 +9,10 @@ import javax.persistence.Table;
 @Entity
 @Table(name="Documentario")
 public class Documentario {
-	@ID
-	@OneToOne
-    @JoinColumn(name = "documnetario_id")
+	
+	@Id
+	private long id;
+	
 	private String nome;
 	private String ano;
 	private String elenco;

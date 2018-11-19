@@ -6,8 +6,8 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="Temporada")
-public class Temporada {@Table(name="Usuario")
-	@ID
+public class Temporada {
+	@Id
 	private String lançamento;
 	private int quant_episodios;
 	public String getLançamento() {

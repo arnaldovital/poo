@@ -2,11 +2,15 @@ package netflixproj.net;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.OneToOne;
 
 @Entity
 public class Assinatura {
-	@ID
+	@Id                                                                                                      
 	@GeneratedValue
+	
+	@OneToOne(mappedBy="assinatura")
 	private Usuario usuario;
 	private String plano;
 	private String mes_gratis;

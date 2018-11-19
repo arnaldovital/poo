@@ -1,9 +1,11 @@
+
 package netflixproj.net;
 
 import java.util.ArrayList;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
@@ -12,7 +14,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name="Conteudo")
 public class Conteudo {
-	@ID
+	@Id
 	@GeneratedValue
 	private String download_de_conteudo;
 	private String variaçao_por_regiao;
@@ -21,7 +23,15 @@ public class Conteudo {
         joinColumns = @JoinColumn(name = "conteudo_id"),
         inverseJoinColumns = @JoinColumn(name = "documentario_id"))
 	private ArrayList<Documentario>documentarios;
+	@ManyToMany
+    @JoinTable(name = "conteudo_series",
+        joinColumns = @JoinColumn(name = "conteudo_id"),
+        inverseJoinColumns = @JoinColumn(name = "series_id"))
 	private ArrayList<Series>series;
+	@ManyToMany
+    @JoinTable(name = "conteudo_filmes",
+        joinColumns = @JoinColumn(name = "conteudo_id"),
+        inverseJoinColumns = @JoinColumn(name = "filmes_id"))
 	private ArrayList<Filmes>filmes;
 	public String getDownload_de_conteudo() {
 		return download_de_conteudo;

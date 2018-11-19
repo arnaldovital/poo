@@ -4,13 +4,20 @@ import java.util.ArrayList;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 @Entity
 @Table(name="Series")
 public class Series {
-	@ID
+	@Id
 	private String nome;
 	private String ano;
+	@ManyToMany
+    @JoinTable(name = "series_temporada",
+        joinColumns = @JoinColumn(name = "series_id"),
+        inverseJoinColumns = @JoinColumn(name = "temporada_id"))
 	private ArrayList<Temporada>temporadas;
 	public String getNome() {
 		return nome;

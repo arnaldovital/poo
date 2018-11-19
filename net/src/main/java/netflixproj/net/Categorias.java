@@ -3,16 +3,24 @@ package netflixproj.net;
 import java.util.ArrayList;
 
 import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 
 @Entity
 @Table(name="Categorias")
 public class Categorias {
-	@ID
+	@Id
 	private String melhores_filmes_avaliados;
 	private String filmes_populares;
 	private String genero;
 	private String novos_filmes;
+	@ManyToMany
+    @JoinTable(name = "categorias_conteudo",
+        joinColumns = @JoinColumn(name = "categorias_id"),
+        inverseJoinColumns = @JoinColumn(name = "conteudo_id"))
 	private ArrayList<Conteudo>conteudo;
 	public String getMelhores_filmes_avaliados() {
 		return melhores_filmes_avaliados;
