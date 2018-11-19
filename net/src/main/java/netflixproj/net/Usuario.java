@@ -4,6 +4,10 @@ import java.util.ArrayList;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -12,6 +16,12 @@ public class Usuario {
 	@ID
 	@GeneratedValue
 	private int id_usuario;
+	@OneToOne
+    @JoinColumn(name = "conteudo_id")
+	private Conteudo conteudo;
+	@OneToOne
+    @JoinColumn(name = "assinatura_id")
+	private Assinatura assinatura;
 	public int getId_usuario() {
 		return id_usuario;
 	}

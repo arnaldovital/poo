@@ -3,14 +3,23 @@ package netflixproj.net;
 import java.util.ArrayList;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 
 @Entity
 @Table(name="Conteudo")
 public class Conteudo {
 	@ID
+	@GeneratedValue
 	private String download_de_conteudo;
 	private String variaçao_por_regiao;
+	@ManyToMany
+    @JoinTable(name = "conteudo_documentario",
+        joinColumns = @JoinColumn(name = "conteudo_id"),
+        inverseJoinColumns = @JoinColumn(name = "documentario_id"))
 	private ArrayList<Documentario>documentarios;
 	private ArrayList<Series>series;
 	private ArrayList<Filmes>filmes;

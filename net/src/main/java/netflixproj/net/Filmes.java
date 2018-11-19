@@ -2,12 +2,17 @@ package netflixproj.net;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
 @Table(name="Filmes")
 public class Filmes {
 	@ID
+	@OneToOne
+    @JoinColumn(name = "filmes_id")
 	private String nome;
 	private String ano;
 	private String elenco;
