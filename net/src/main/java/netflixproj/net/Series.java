@@ -3,8 +3,10 @@ package netflixproj.net;
 import java.util.ArrayList;
 
 import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 @Entity
-
+@Table(name="Series")
 public class Series {
 	@ID
 	private String nome;

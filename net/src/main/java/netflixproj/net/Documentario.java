@@ -1,8 +1,11 @@
 package netflixproj.net;
 
 import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table(name="Documentario")
 public class Documentario {
 	@ID
 	private String nome;

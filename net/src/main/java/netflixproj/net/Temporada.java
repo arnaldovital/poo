@@ -1,9 +1,12 @@
 package netflixproj.net;
 
 import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
-public class Temporada {
+@Table(name="Temporada")
+public class Temporada {@Table(name="Usuario")
 	@ID
 	private String lançamento;
 	private int quant_episodios;

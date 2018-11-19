@@ -3,12 +3,14 @@ package netflixproj.net;
 import java.util.ArrayList;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Table;
 
 @Entity
-
+@Table(name="Usuario")
 public class Usuario {
 	@ID
-	
+	@GeneratedValue
 	private int id_usuario;
 	public int getId_usuario() {
 		return id_usuario;

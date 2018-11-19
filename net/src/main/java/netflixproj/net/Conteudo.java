@@ -3,9 +3,10 @@ package netflixproj.net;
 import java.util.ArrayList;
 
 import javax.persistence.Entity;
+import javax.persistence.Table;
 
 @Entity
-
+@Table(name="Conteudo")
 public class Conteudo {
 	@ID
 	private String download_de_conteudo;

@@ -2,11 +2,12 @@ package netflixproj.net;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
-
+@Table(name="Filmes")
 public class Filmes {
-	@Id
+	@ID
 	private String nome;
 	private String ano;
 	private String elenco;

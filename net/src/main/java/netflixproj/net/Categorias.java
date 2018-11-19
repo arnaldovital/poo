@@ -3,8 +3,10 @@ package netflixproj.net;
 import java.util.ArrayList;
 
 import javax.persistence.Entity;
+import javax.persistence.Table;
 
 @Entity
+@Table(name="Categorias")
 public class Categorias {
 	@ID
 	private String melhores_filmes_avaliados;
