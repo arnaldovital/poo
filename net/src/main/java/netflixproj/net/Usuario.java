@@ -50,6 +50,14 @@ public class Usuario {
 				+ getConteudos() + ", getClass()=" + getClass() + ", hashCode()=" + hashCode() + ", toString()="
 				+ super.toString() + "]";
 	}
+	public void setId(long l) {
+		// TODO Auto-generated method stub
+		
+	}
+	public void setNome(String string) {
+		// TODO Auto-generated method stub
+		
+	}
 	
 
 }
