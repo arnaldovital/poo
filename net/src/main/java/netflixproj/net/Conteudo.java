@@ -13,7 +13,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="Conteudo")
-public class Conteudo {
+public class Conteudo implements Identificavel{
 	@Id
 	@GeneratedValue
 	private String download_de_conteudo;
@@ -71,6 +71,14 @@ public class Conteudo {
 				+ getVariaçao_por_regiao() + ", getDocumentarios()=" + getDocumentarios() + ", getSeries()="
 				+ getSeries() + ", getFilmes()=" + getFilmes() + ", getClass()=" + getClass() + ", hashCode()="
 				+ hashCode() + ", toString()=" + super.toString() + "]";
+	}
+	public Long getId() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	public void setId(Long id) {
+		// TODO Auto-generated method stub
+		
 	}
 	
 

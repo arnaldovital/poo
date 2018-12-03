@@ -11,7 +11,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="Categorias")
-public class Categorias {
+public class Categorias  implements Identificavel{
 	@Id
 	private String melhores_filmes_avaliados;
 	private String filmes_populares;
@@ -60,6 +60,14 @@ public class Categorias {
 				+ getFilmes_populares() + ", getGenero()=" + getGenero() + ", getNovos_filmes()=" + getNovos_filmes()
 				+ ", getConteudo()=" + getConteudo() + ", getClass()=" + getClass() + ", hashCode()=" + hashCode()
 				+ ", toString()=" + super.toString() + "]";
+	}
+	public Long getId() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	public void setId(Long id) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

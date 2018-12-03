@@ -9,7 +9,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="Filmes")
-public class Filmes {
+public class Filmes implements Identificavel{
 	@Id
 	@OneToOne
     @JoinColumn(name = "filmes_id")
@@ -47,6 +47,14 @@ public class Filmes {
 				+ getNome() + ", getAno()=" + getAno() + ", getElenco()=" + getElenco() + ", getDuraçao()="
 				+ getDuraçao() + ", getClass()=" + getClass() + ", hashCode()=" + hashCode() + ", toString()="
 				+ super.toString() + "]";
+	}
+	public Long getId() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	public void setId(Long id) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

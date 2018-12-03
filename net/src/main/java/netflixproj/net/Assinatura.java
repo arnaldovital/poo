@@ -6,7 +6,7 @@ import javax.persistence.Id;
 import javax.persistence.OneToOne;
 
 @Entity
-public class Assinatura {
+public class Assinatura implements Identificavel{
 	@Id                                                                                                      
 	@GeneratedValue
 	
@@ -53,5 +53,15 @@ public class Assinatura {
 		return "Assinatura [usuario=" + usuario + ", plano=" + plano + ", mes_gratis=" + mes_gratis
 				+ ", forma_pagamento=" + forma_pagamento + "]";
 
+	}
+
+	public Long getId() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public void setId(Long id) {
+		// TODO Auto-generated method stub
+		
 	}
 }

@@ -10,7 +10,7 @@ import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 @Entity
 @Table(name="Series")
-public class Series {
+public class Series implements Identificavel{
 	@Id
 	private String nome;
 	private String ano;
@@ -42,6 +42,14 @@ public class Series {
 		return "Series [nome=" + nome + ", ano=" + ano + ", temporadas=" + temporadas + ", getNome()=" + getNome()
 				+ ", getAno()=" + getAno() + ", getTemporadas()=" + getTemporadas() + ", getClass()=" + getClass()
 				+ ", hashCode()=" + hashCode() + ", toString()=" + super.toString() + "]";
+	}
+	public Long getId() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	public void setId(Long id) {
+		// TODO Auto-generated method stub
+		
 	}
 	
 

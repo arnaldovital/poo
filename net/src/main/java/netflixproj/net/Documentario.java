@@ -8,7 +8,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="Documentario")
-public class Documentario {
+public class Documentario implements Identificavel{
 	
 	@Id
 	private long id;
@@ -47,6 +47,14 @@ public class Documentario {
 				+ ", getNome()=" + getNome() + ", getAno()=" + getAno() + ", getElenco()=" + getElenco()
 				+ ", getDuraçao()=" + getDuraçao() + ", getClass()=" + getClass() + ", hashCode()=" + hashCode()
 				+ ", toString()=" + super.toString() + "]";
+	}
+	public Long getId() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	public void setId(Long id) {
+		// TODO Auto-generated method stub
+		
 	}
 	
 

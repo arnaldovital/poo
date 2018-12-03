@@ -6,7 +6,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="Episodio")
-public class Episodio {
+public class Episodio implements Identificavel{
 	@Id
 	private String elenco;
 	private String duraçao;
@@ -27,6 +27,14 @@ public class Episodio {
 		return "Episodio [elenco=" + elenco + ", duraçao=" + duraçao + ", getElenco()=" + getElenco()
 				+ ", getDuraçao()=" + getDuraçao() + ", getClass()=" + getClass() + ", hashCode()=" + hashCode()
 				+ ", toString()=" + super.toString() + "]";
+	}
+	public Long getId() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	public void setId(Long id) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

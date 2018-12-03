@@ -13,7 +13,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="Usuario")
-public class Usuario {
+public class Usuario implements Identificavel{
 	@Id
 	@GeneratedValue
 	private int id_usuario;
@@ -55,6 +55,14 @@ public class Usuario {
 		
 	}
 	public void setNome(String string) {
+		// TODO Auto-generated method stub
+		
+	}
+	public Long getId() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	public void setId(Long id) {
 		// TODO Auto-generated method stub
 		
 	}
