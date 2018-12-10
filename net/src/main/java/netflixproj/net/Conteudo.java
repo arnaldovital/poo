@@ -80,6 +80,10 @@ public class Conteudo implements Identificavel{
 		// TODO Auto-generated method stub
 		
 	}
+	public void setNome(String string) {
+		// TODO Auto-generated method stub
+		
+	}
 	
 
 }
