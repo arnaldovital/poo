@@ -8,8 +8,9 @@ import javax.persistence.Table;
 @Table(name="Episodio")
 public class Episodio implements Identificavel{
 	@Id
-	private String elenco;
+	private Long id;
 	private String duraçao;
+	private String elenco;
 	public String getElenco() {
 		return elenco;
 	}
@@ -29,11 +30,10 @@ public class Episodio implements Identificavel{
 				+ ", toString()=" + super.toString() + "]";
 	}
 	public Long getId() {
-		// TODO Auto-generated method stub
-		return null;
+		return this.id;
 	}
 	public void setId(Long id) {
-		// TODO Auto-generated method stub
+		this.id = id;
 		
 	}
 

@@ -16,6 +16,7 @@ import javax.persistence.Table;
 public class Conteudo implements Identificavel{
 	@Id
 	@GeneratedValue
+	private Long id;
 	private String download_de_conteudo;
 	private String variaçao_por_regiao;
 	@ManyToMany
@@ -73,15 +74,10 @@ public class Conteudo implements Identificavel{
 				+ hashCode() + ", toString()=" + super.toString() + "]";
 	}
 	public Long getId() {
-		// TODO Auto-generated method stub
-		return null;
+		return this.id;
 	}
 	public void setId(Long id) {
-		// TODO Auto-generated method stub
-		
-	}
-	public void setNome(String string) {
-		// TODO Auto-generated method stub
+		this.id = id;
 		
 	}
 	

@@ -9,7 +9,7 @@ import javax.persistence.OneToOne;
 public class Assinatura implements Identificavel{
 	@Id                                                                                                      
 	@GeneratedValue
-	
+	private Long id;
 	@OneToOne(mappedBy="assinatura")
 	private Usuario usuario;
 	private String plano;
@@ -56,12 +56,10 @@ public class Assinatura implements Identificavel{
 	}
 
 	public Long getId() {
-		// TODO Auto-generated method stub
-		return null;
+		return this.id;
 	}
 
 	public void setId(Long id) {
-		// TODO Auto-generated method stub
-		
+		this.id = id;
 	}
 }

@@ -11,7 +11,7 @@ import javax.persistence.Table;
 public class Documentario implements Identificavel{
 	
 	@Id
-	private long id;
+	private Long id;
 	
 	private String nome;
 	private String ano;
@@ -49,12 +49,10 @@ public class Documentario implements Identificavel{
 				+ ", toString()=" + super.toString() + "]";
 	}
 	public Long getId() {
-		// TODO Auto-generated method stub
-		return null;
+		return this.id;
 	}
 	public void setId(Long id) {
-		// TODO Auto-generated method stub
-		
+		this.id = id;
 	}
 	
 

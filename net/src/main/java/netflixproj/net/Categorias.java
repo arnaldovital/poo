@@ -13,6 +13,7 @@ import javax.persistence.Table;
 @Table(name="Categorias")
 public class Categorias  implements Identificavel{
 	@Id
+	private Long id;
 	private String melhores_filmes_avaliados;
 	private String filmes_populares;
 	private String genero;
@@ -62,12 +63,10 @@ public class Categorias  implements Identificavel{
 				+ ", toString()=" + super.toString() + "]";
 	}
 	public Long getId() {
-		// TODO Auto-generated method stub
-		return null;
+		return this.id;
 	}
 	public void setId(Long id) {
-		// TODO Auto-generated method stub
-		
+		this.id = id;
 	}
 
 }
